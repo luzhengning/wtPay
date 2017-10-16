@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="wtPay.GeneralForm.FormCardFail"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:localusercontrol="clr-namespace:wtPay.usercontrol" 
+      mc:Ignorable="d" Loaded="UserControl_Loaded"
+	>
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Margin="0,0,0,100" RenderTransformOrigin="0.489,0.632">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"></RowDefinition>
+            <RowDefinition Height="100*"></RowDefinition>
+            <RowDefinition Height="300*"></RowDefinition>
+            <RowDefinition Height="130*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Width="859" Margin="30,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+           <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Stretch="Fill"  VerticalAlignment="Center" HorizontalAlignment="Center" Source="../cut-2/step3.png" Height="51" Margin="0,14" Width="659" />
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="1. 输入账号" Foreground="White" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" Height="28" Margin="-50,20,86,21" Width="114" Grid.ColumnSpan="2"></TextBlock>
+            <TextBlock Grid.Row="0" Text="2. 核对信息" Foreground="White" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" Height="28" Margin="-80,20,39,21" Width="114" Grid.ColumnSpan="2" Grid.Column="1"/>
+            <TextBlock Grid.Row="0" Grid.Column="2" Text="3. 支付" Foreground="White" FontSize="22" VerticalAlignment="Center" Height="28" Margin="70,20,3,21" Width="98"/>
+            <TextBlock Grid.Row="0" Grid.Column="3" Text="4. 完成" Foreground="White" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,20,29,21" Height="28" Width="68" />
+            <Grid Grid.Column="4">
+                <localusercontrol:CountDownTimer></localusercontrol:CountDownTimer>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" Grid.RowSpan="2" Margin="90,10,90,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Panel.ZIndex="100" HorizontalAlignment="Center">
+                <Image Height="50" Width="50" VerticalAlignment="Center" HorizontalAlignment="Center" Source="../cut-2/error.png"></Image>
+                <TextBlock Text="业务正忙，请稍后再试..." FontSize="28" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Name="lblShowinfo"></TextBlock>
+            </StackPanel>
+            <Image Grid.Row="0" Grid.RowSpan="5" Margin="-50,0,-50,0" Source="../cut-2/bg.png" Stretch="Fill"></Image>
+
+            <TextBlock Grid.Row="1" Margin="-50,-200,-50,0"  Text="如有疑问请拨打客服热线0931-2103566" FontSize="22" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Uid="退出" Grid.Row="0" Grid.Column="2" DataContext="cut-2/exit.png" Style="{StaticResource choose-btn-style }" Click="退出_Click">
+
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>
+
+

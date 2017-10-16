@@ -1,0 +1,138 @@
+﻿<UserControl x:Class="wtPay.FormRegistration.FormRegistrationRecord"
+     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:localusercontrol="clr-namespace:wtPay.usercontrol"
+      mc:Ignorable="d" Loaded="UserControl_Loaded" Unloaded="UserControl_Unloaded"
+	>
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Margin="0,0,0,100" RenderTransformOrigin="0.489,0.632">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"></RowDefinition>
+            <RowDefinition Height="100*"></RowDefinition>
+            <RowDefinition Height="300*"></RowDefinition>
+            <RowDefinition Height="130*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Width="859" Margin="30,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+           <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Stretch="Fill"  VerticalAlignment="Center" HorizontalAlignment="Center" Source="../cut-2/step3.png" Height="51" Margin="0,14" Width="659" />
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="1. 预约挂号" Foreground="White" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" Height="28" Margin="-50,20,86,21" Width="114" Grid.ColumnSpan="2"></TextBlock>
+            <TextBlock Grid.Row="0" Text="2. 输入号码" Foreground="White" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" Height="28" Margin="56,25,142,26" Width="146" Grid.ColumnSpan="2" Grid.Column="1"/>
+            <TextBlock Grid.Row="0" Grid.Column="2" Text="3. 查询" Foreground="White" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" Height="28"  Margin="70,20,3,21" Width="98"/>
+            <TextBlock Grid.Row="0" Grid.Column="3" Text="4. 完成" Foreground="White" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,20,29,21" Height="28" Width="68" />
+            <Grid Grid.Column="4">
+                <localusercontrol:CountDownTimer></localusercontrol:CountDownTimer>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" Grid.RowSpan="2" Margin="90,10,90,0" Panel.ZIndex="100">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100*"></ColumnDefinition>
+                <ColumnDefinition Width="280*"></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+            <Image Grid.Row="0" Grid.RowSpan="18" Grid.ColumnSpan="4" Margin="-50,0,-50,0" Source="../cut-2/bg.png" Stretch="Fill"></Image>
+            <TextBlock Name="showinfo"  Margin="0,10,0,0" Text="------" HorizontalAlignment="Center"  VerticalAlignment="Center" Foreground="White"  FontSize="20pt"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"></TextBlock>
+
+            <TextBlock Grid.Row="1" Grid.Column="0" Name="nameTitle"  Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="姓名" Height="24px"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="1" Name="timeTitle" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="预约时间           预约编号" Height="24px" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="2" Name="cardTitle"  Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="证件号" Height="24px" Margin="260,0,0,0"></TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="0" Name="name2" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px"></TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="1" Name="time2" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="1" Name="cardId2" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" Margin="260,0,0,0"></TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="1" Name="cardId3" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" Margin="260,0,0,0"></TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="0" Name="name3" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px"></TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="1" Name="time3" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="0" Name="name4" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px"></TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="1" Name="time4" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="1" Name="cardId4" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" Margin="260,0,0,0"></TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="0" Name="name5" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px"></TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="1" Name="time5" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="1" Name="cardId5" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" Margin="260,0,0,0"></TextBlock>
+            <TextBlock Grid.Row="6" Grid.Column="0" Name="name6" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px"></TextBlock>
+            <TextBlock Grid.Row="6" Grid.Column="1" Name="time6" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="6" Grid.Column="1" Name="cardId6" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" Margin="260,0,0,0"></TextBlock>
+            <TextBlock Grid.Row="7" Grid.Column="0" Name="name7" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px"></TextBlock>
+            <TextBlock Grid.Row="7" Grid.Column="1" Name="time7" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="7" Grid.Column="1" Name="cardId7" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" Margin="260,0,0,0"></TextBlock>
+            <TextBlock Grid.Row="8" Grid.Column="0" Name="name8" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px"></TextBlock>
+            <TextBlock Grid.Row="8" Grid.Column="1" Name="time8" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="8" Grid.Column="1" Name="cardId8" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" Margin="260,0,0,0"></TextBlock>
+            <TextBlock Grid.Row="9" Grid.Column="0" Name="name9" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px"></TextBlock>
+            <TextBlock Grid.Row="9" Grid.Column="1" Name="time9" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="9" Grid.Column="1" Name="cardId9" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" Margin="260,0,0,0"></TextBlock>
+            <TextBlock Grid.Row="10" Grid.Column="0" Name="name10" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px"></TextBlock>
+            <TextBlock Grid.Row="10" Grid.Column="1" Name="time10" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="10" Grid.Column="1" Name="cardId10" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" Margin="260,0,0,0"></TextBlock>
+            <TextBlock Grid.Row="11" Grid.Column="0" Name="name11" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px"></TextBlock>
+            <TextBlock Grid.Row="11" Grid.Column="1" Name="time11" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="11" Grid.Column="1" Name="cardId11" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" Margin="260,0,0,0"></TextBlock>
+            <TextBlock Grid.Row="12" Grid.Column="0" Name="name12" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px"></TextBlock>
+            <TextBlock Grid.Row="12" Grid.Column="1" Name="time12" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="12" Grid.Column="1" Name="cardId12" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" Margin="260,0,0,0"></TextBlock>
+            <TextBlock Grid.Row="13" Grid.Column="0" Name="name13" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px"></TextBlock>
+            <TextBlock Grid.Row="13" Grid.Column="1" Name="time13" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="13" Grid.Column="1" Name="cardId13" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" Margin="260,0,0,0"></TextBlock>
+            <TextBlock Grid.Row="14" Grid.Column="0" Name="name14" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px"></TextBlock>
+            <TextBlock Grid.Row="14" Grid.Column="1" Name="time14" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="14" Grid.Column="1" Name="cardId14" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" Margin="260,0,0,0"></TextBlock>
+            <TextBlock Grid.Row="15" Grid.Column="0" Name="name15" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px"></TextBlock>
+            <TextBlock Grid.Row="15" Grid.Column="1" Name="time15" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="15" Grid.Column="1" Name="cardId15" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" Margin="260,0,0,0"></TextBlock>
+            <TextBlock Grid.Row="16" Grid.Column="0" Name="name16" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px"></TextBlock>
+            <TextBlock Grid.Row="16" Grid.Column="1" Name="time16" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="16" Grid.Column="1" Name="cardId16" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" Margin="260,0,0,0"></TextBlock>
+            <TextBlock Grid.Row="17" Grid.Column="0" Name="name17" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px"></TextBlock>
+            <TextBlock Grid.Row="17" Grid.Column="1" Name="time17" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="17" Grid.Column="1" Name="cardId17" Foreground="White" FontSize="14pt" HorizontalAlignment="Left" Text="------" Height="24px" Margin="260,0,0,0"></TextBlock>
+
+
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button Uid="返回" Grid.Row="0" Grid.Column="2" DataContext="cut-2/exit.png" Style="{StaticResource choose-btn-style }" Click="退出_Click">
+
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>
+
+

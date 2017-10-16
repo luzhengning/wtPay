@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="wtPay.AdvertisePage"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:localcontrol="clr-namespace:wtPay.usercontrol"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" Unloaded="UserControl_Unloaded" Loaded="UserControl_Loaded" 
+	>
+
+    <Grid Height="Auto" Width="Auto">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="375"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Name="listBoxPic" Source="cut-2/11.png" Grid.Row="0" Grid.Column="0" Stretch="Fill" HorizontalAlignment="Left" Margin="0,0,0,90" ></Image>
+        <Frame Name="inputFrame" Grid.Row="0" Grid.Column="1" NavigationUIVisibility="Hidden" ></Frame>
+
+        <localcontrol:BottomContent Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"></localcontrol:BottomContent>
+
+    </Grid>
+</UserControl>

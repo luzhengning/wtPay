@@ -1,0 +1,1613 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C0520E4-4C59-4429-A9EE-777A67D3518D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>wtPay</RootNamespace>
+    <AssemblyName>wtPay</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Awesomium.Core, Version=1.6.6.0, Culture=neutral, PublicKeyToken=e1a0d7c8071a5214, processorArchitecture=x86" />
+    <Reference Include="Awesomium.Windows.Controls, Version=1.6.6.0, Culture=neutral, PublicKeyToken=7a34e179b8b61c39, processorArchitecture=x86" />
+    <Reference Include="AxInterop.ELECTREADER01Lib">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2015\Projects\beianCard\beianCard\bin\Debug\AxInterop.ELECTREADER01Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AxInterop.WMPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.wyzh">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2015\Projects\beianCard\beianCard\bin\Debug\AxInterop.wyzh.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ELECTREADER01Lib">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2015\Projects\beianCard\beianCard\bin\Debug\Interop.ELECTREADER01Lib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.wyzh">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2015\Projects\beianCard\beianCard\bin\Debug\Interop.wyzh.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Administrator\Desktop\WtTerminal\WtTerminal\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Transitionals">
+      <HintPath>E:\nabai\wpf切换窗口特效\WpfApplication1\bin\Debug\Transitionals.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AdvertisePage.xaml.cs">
+      <DependentUpon>AdvertisePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormBroadCas\FormBroadCasStep01.xaml.cs">
+      <DependentUpon>FormBroadCasStep01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormBroadCas\FormBroadCasStep02.xaml.cs">
+      <DependentUpon>FormBroadCasStep02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormBroadCas\FormBroadCasStep03.xaml.cs">
+      <DependentUpon>FormBroadCasStep03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormBroadCas\FormBroadCasStep06.xaml.cs">
+      <DependentUpon>FormBroadCasStep06.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormBroadCas\FormBroadCasStep06_success.xaml.cs">
+      <DependentUpon>FormBroadCasStep06_success.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormBus\FormBusStep01.xaml.cs">
+      <DependentUpon>FormBusStep01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormBus\FormBusStep03.xaml.cs">
+      <DependentUpon>FormBusStep03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormBus\FormBusStep04.xaml.cs">
+      <DependentUpon>FormBusStep04.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormBus\FormBusStep07.xaml.cs">
+      <DependentUpon>FormBusStep07.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormBus\FormBusStep08_success.xaml.cs">
+      <DependentUpon>FormBusStep08_success.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCitizen\FormCitizenStep01.xaml.cs">
+      <DependentUpon>FormCitizenStep01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCitizen\FormCitizenStep02.xaml.cs">
+      <DependentUpon>FormCitizenStep02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCitizen\FormCitizenStep03.xaml.cs">
+      <DependentUpon>FormCitizenStep03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCitizen\FormCitizenInputNo.xaml.cs">
+      <DependentUpon>FormCitizenInputNo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCitizen\FormCitizenStepRechargeDetail.xaml.cs">
+      <DependentUpon>FormCitizenStepRechargeDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCitizen\FormCitizenStepLoad.xaml.cs">
+      <DependentUpon>FormCitizenStepLoad.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCitizen\FormCitizenStepValidatecode_1.xaml.cs">
+      <DependentUpon>FormCitizenStepValidatecode_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCitizen\FormCitizenStepInputPwd.xaml.cs">
+      <DependentUpon>FormCitizenStepInputPwd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCitizen\FormCitizenStep04.xaml.cs">
+      <DependentUpon>FormCitizenStep04.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCitizen\FormCitizenStep07.xaml.cs">
+      <DependentUpon>FormCitizenStep07.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCitizen\FormCitizenStep08_success.xaml.cs">
+      <DependentUpon>FormCitizenStep08_success.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCitizen\FormCitizenStep.xaml.cs">
+      <DependentUpon>FormCitizenStep.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCitizen\FormCitizenStepSpendDetail.xaml.cs">
+      <DependentUpon>FormCitizenStepSpendDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCitizen\FormCitizenStepUpdatePwd.xaml.cs">
+      <DependentUpon>FormCitizenStepUpdatePwd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCitizen\FormSelectAmout.xaml.cs">
+      <DependentUpon>FormSelectAmout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormElectric\FormElectricStep01.xaml.cs">
+      <DependentUpon>FormElectricStep01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormElectric\FormElectricStep02.xaml.cs">
+      <DependentUpon>FormElectricStep02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormElectric\FormElectricStep03.xaml.cs">
+      <DependentUpon>FormElectricStep03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormElectric\FormElectricStep06.xaml.cs">
+      <DependentUpon>FormElectricStep06.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormElectric\FormElectricStep06_success.xaml.cs">
+      <DependentUpon>FormElectricStep06_success.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormExpress\FormExpressInput.xaml.cs">
+      <DependentUpon>FormExpressInput.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormExpress\FormExpressResult.xaml.cs">
+      <DependentUpon>FormExpressResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormGas\FormGas.xaml.cs">
+      <DependentUpon>FormGas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormGas\FormGasGoldenCard\FormGasGoldenCardStep02.xaml.cs">
+      <DependentUpon>FormGasGoldenCardStep02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormGas\FormGasGoldenCard\FormGasGoldenCardStep03.xaml.cs">
+      <DependentUpon>FormGasGoldenCardStep03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormGas\FormGasGoldenCard\FormGasGoldenCardStep04.xaml.cs">
+      <DependentUpon>FormGasGoldenCardStep04.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormGas\FormGasGoldenCard\FormGasGoldenCardStep07.xaml.cs">
+      <DependentUpon>FormGasGoldenCardStep07.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormGas\FormGasGoldenCard\FormGasGoldenCardStep08_success.xaml.cs">
+      <DependentUpon>FormGasGoldenCardStep08_success.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormGas\FromGasPioneerCard\FormGasPioneerCardStep02.xaml.cs">
+      <DependentUpon>FormGasPioneerCardStep02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormHeat\FormHeatStep01.xaml.cs">
+      <DependentUpon>FormHeatStep01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormHeat\FormHeatStep02.xaml.cs">
+      <DependentUpon>FormHeatStep02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormHeat\FormHeatStep06.xaml.cs">
+      <DependentUpon>FormHeatStep06.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormHeat\FormHeatStep06_success.xaml.cs">
+      <DependentUpon>FormHeatStep06_success.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoad.Designer.cs">
+      <DependentUpon>FormLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaintainSign\FormMaintainSign.xaml.cs">
+      <DependentUpon>FormMaintainSign.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaintainSign\FormMaintainSignWait.xaml.cs">
+      <DependentUpon>FormMaintainSignWait.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaintainSign\FormMechineTemp.xaml.cs">
+      <DependentUpon>FormMechineTemp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaintainSign\FormRefund.xaml.cs">
+      <DependentUpon>FormRefund.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaintainSign\FormMechineState.xaml.cs">
+      <DependentUpon>FormMechineState.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaintainSign\FormNetTest.xaml.cs">
+      <DependentUpon>FormNetTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormMobile\FormMobileStep.xaml.cs">
+      <DependentUpon>FormMobileStep.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormMobile\FormMobileStep01.xaml.cs">
+      <DependentUpon>FormMobileStep01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormMobile\FormMobileStep02.xaml.cs">
+      <DependentUpon>FormMobileStep02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormMobile\FormMobileStep03.xaml.cs">
+      <DependentUpon>FormMobileStep03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormMobile\FormMobileStep06.xaml.cs">
+      <DependentUpon>FormMobileStep06.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormMobile\FormMobileStep06_success.xaml.cs">
+      <DependentUpon>FormMobileStep06_success.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormMobile\FormMobileSelectAmout.xaml.cs">
+      <DependentUpon>FormMobileSelectAmout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormNews\FormNewsList.xaml.cs">
+      <DependentUpon>FormNewsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormNews\FormNewsDetails.xaml.cs">
+      <DependentUpon>FormNewsDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormPropSec\FormPropSec01.xaml.cs">
+      <DependentUpon>FormPropSec01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormPropSec\FormPropSec01_2.xaml.cs">
+      <DependentUpon>FormPropSec01_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormPropSec\FormPropSecStep09.xaml.cs">
+      <DependentUpon>FormPropSecStep09.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormPropSec\FormPropSecStep02.xaml.cs">
+      <DependentUpon>FormPropSecStep02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormPropSec\FormPropSecStep03.xaml.cs">
+      <DependentUpon>FormPropSecStep03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormPropSec\FormPropSecStep04.xaml.cs">
+      <DependentUpon>FormPropSecStep04.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormPropSec\FormPropSecStep07.xaml.cs">
+      <DependentUpon>FormPropSecStep07.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormPropSec\FormPropSecStep08_success.xaml.cs">
+      <DependentUpon>FormPropSecStep08_success.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormProp\FormPropStep.xaml.cs">
+      <DependentUpon>FormPropStep.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormProp\FormPropStep01.xaml.cs">
+      <DependentUpon>FormPropStep01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormProp\FormPropStep02.xaml.cs">
+      <DependentUpon>FormPropStep02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormProp\FormPropStep02_house.xaml.cs">
+      <DependentUpon>FormPropStep02_house.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormProp\FormPropStep02_ParkingLot.xaml.cs">
+      <DependentUpon>FormPropStep02_ParkingLot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormProp\FormPropStep06.xaml.cs">
+      <DependentUpon>FormPropStep06.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormProp\FormPropStep06_success.xaml.cs">
+      <DependentUpon>FormPropStep06_success.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormProp\PropTemp\FormPropStepTemp06.xaml.cs">
+      <DependentUpon>FormPropStepTemp06.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormProp\PropTemp\FormPropStepTemp06_success.xaml.cs">
+      <DependentUpon>FormPropStepTemp06_success.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormProp\PropTemp\FormPropStepTemp03.xaml.cs">
+      <DependentUpon>FormPropStepTemp03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormProp\PropTemp\FormPropStepTemp02.xaml.cs">
+      <DependentUpon>FormPropStepTemp02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormProp\PropTemp\FormPropStepInCard01.xaml.cs">
+      <DependentUpon>FormPropStepInCard01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormPublicFund\FormPublicFund.xaml.cs">
+      <DependentUpon>FormPublicFund.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormPublicFund\FormPublicFundAccountInfo.xaml.cs">
+      <DependentUpon>FormPublicFundAccountInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormPublicFund\FormPublicFundCardType.xaml.cs">
+      <DependentUpon>FormPublicFundCardType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormPublicFund\FormPublicFundCustomerInfo.xaml.cs">
+      <DependentUpon>FormPublicFundCustomerInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormPublicFund\FormPublicFundDetailedInfo.xaml.cs">
+      <DependentUpon>FormPublicFundDetailedInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormPublicFund\FormPublicFundInput.xaml.cs">
+      <DependentUpon>FormPublicFundInput.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormPublicFund\FormPublicFundWait.xaml.cs">
+      <DependentUpon>FormPublicFundWait.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormPublicFund\FormPublicLoanBalanceInfo.xaml.cs">
+      <DependentUpon>FormPublicLoanBalanceInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormPublicFund\FormpublicLoanDetailedInfo.xaml.cs">
+      <DependentUpon>FormpublicLoanDetailedInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistration\FormRegistrationSw.xaml.cs">
+      <DependentUpon>FormRegistrationSw.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistration\FormRegistrationRecord.xaml.cs">
+      <DependentUpon>FormRegistrationRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistration\FormRegistrationUndoInput.xaml.cs">
+      <DependentUpon>FormRegistrationUndoInput.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistration\FormRegistration_success.xaml.cs">
+      <DependentUpon>FormRegistration_success.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistration\FormRegistration.xaml.cs">
+      <DependentUpon>FormRegistration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormExpress\FormExpressType.xaml.cs">
+      <DependentUpon>FormExpressType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistration\FormRegistrationDoctor_3.xaml.cs">
+      <DependentUpon>FormRegistrationDoctor_3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistration\FormRegistrationDepartment_2.xaml.cs">
+      <DependentUpon>FormRegistrationDepartment_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistration\FormRegistrationHospital_1.xaml.cs">
+      <DependentUpon>FormRegistrationHospital_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistration\FormRegistrationInput.xaml.cs">
+      <DependentUpon>FormRegistrationInput.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistration\FormRegistrationWait.xaml.cs">
+      <DependentUpon>FormRegistrationWait.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormSocialSecurity\FormSocialSecurityPensionGrant.xaml.cs">
+      <DependentUpon>FormSocialSecurityPensionGrant.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormSocialSecurity\FormSocialSecuritySelectTimet.xaml.cs">
+      <DependentUpon>FormSocialSecuritySelectTimet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormSocialSecurity\FormSocialSecurity.xaml.cs">
+      <DependentUpon>FormSocialSecurity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormSocialSecurity\FormSocialSecurityInfo.xaml.cs">
+      <DependentUpon>FormSocialSecurityInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormSocialSecurity\FormSocialSecurityInput.xaml.cs">
+      <DependentUpon>FormSocialSecurityInput.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormSocialSecurity\FormSocialSecurityMedicalAccount.xaml.cs">
+      <DependentUpon>FormSocialSecurityMedicalAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormSocialSecurity\FormSocialSecurityPensionAccount.xaml.cs">
+      <DependentUpon>FormSocialSecurityPensionAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormSocialSecurity\FormSocialSecurityMedicalAccountConsume.xaml.cs">
+      <DependentUpon>FormSocialSecurityMedicalAccountConsume.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormSocialSecurity\FormSocialSecurityWait.xaml.cs">
+      <DependentUpon>FormSocialSecurityWait.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormTraffic\FormTrafficViolation.xaml.cs">
+      <DependentUpon>FormTrafficViolation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormUnicom\FormUnicomStep06_success.xaml.cs">
+      <DependentUpon>FormUnicomStep06_success.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormUnicom\FormUnicomStep02.xaml.cs">
+      <DependentUpon>FormUnicomStep02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormUnicom\FormUnicomStep03.xaml.cs">
+      <DependentUpon>FormUnicomStep03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormUnicom\FormUnicomStep06.xaml.cs">
+      <DependentUpon>FormUnicomStep06.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormWater\FormWaterStep01.xaml.cs">
+      <DependentUpon>FormWaterStep01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormWater\FormWaterStep02.xaml.cs">
+      <DependentUpon>FormWaterStep02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormWater\FormWaterStep03.xaml.cs">
+      <DependentUpon>FormWaterStep03.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormWater\FormWaterStep06.xaml.cs">
+      <DependentUpon>FormWaterStep06.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormWater\FormWaterStep06_success.xaml.cs">
+      <DependentUpon>FormWaterStep06_success.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormGas\FormGasGoldenCard\FormGasGoldenCardFail.xaml.cs">
+      <DependentUpon>FormGasGoldenCardFail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForm\FormCashPay.xaml.cs">
+      <DependentUpon>FormCashPay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForm\FormIsContinue.xaml.cs">
+      <DependentUpon>FormIsContinue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForm\FormPrintError.xaml.cs">
+      <DependentUpon>FormPrintError.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForm\FormFail.xaml.cs">
+      <DependentUpon>FormFail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForm\FormFailNull.xaml.cs">
+      <DependentUpon>FormFailNull.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForm\FormCardFail.xaml.cs">
+      <DependentUpon>FormCardFail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForm\FormNot.xaml.cs">
+      <DependentUpon>FormNot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForm\FormFailRefund.xaml.cs">
+      <DependentUpon>FormFailRefund.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForm\FormReadCard.xaml.cs">
+      <DependentUpon>FormReadCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForm\FormInputPassword.xaml.cs">
+      <DependentUpon>FormInputPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForm\FormStop.xaml.cs">
+      <DependentUpon>FormStop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForm\FormPayType.xaml.cs">
+      <DependentUpon>FormPayType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForm\FormTemp.xaml.cs">
+      <DependentUpon>FormTemp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="keyboard38.xaml.cs">
+      <DependentUpon>keyboard38.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pay\Pay.cs" />
+    <Compile Include="ResourceInitialise.cs" />
+    <Compile Include="usercontrol\BottomContent.xaml.cs">
+      <DependentUpon>BottomContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrol\CountDownTimer.xaml.cs">
+      <DependentUpon>CountDownTimer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Util\JumpUtil.cs" />
+    <Compile Include="Util\ReflectionHelper.cs" />
+    <Compile Include="winform\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="winform\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Page Include="AdvertisePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormBroadCas\FormBroadCasStep01.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormBroadCas\FormBroadCasStep02.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormBroadCas\FormBroadCasStep03.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormBroadCas\FormBroadCasStep06.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormBroadCas\FormBroadCasStep06_success.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormBus\FormBusStep01.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormBus\FormBusStep03.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormBus\FormBusStep04.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormBus\FormBusStep07.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormBus\FormBusStep08_success.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormCitizen\FormCitizenStep01.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormCitizen\FormCitizenStep02.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormCitizen\FormCitizenStep03.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormCitizen\FormCitizenInputNo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormCitizen\FormCitizenStepRechargeDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormCitizen\FormCitizenStepLoad.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormCitizen\FormCitizenStepValidatecode_1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormCitizen\FormCitizenStepInputPwd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormCitizen\FormCitizenStep04.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormCitizen\FormCitizenStep07.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormCitizen\FormCitizenStep08_success.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormCitizen\FormCitizenStep.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormCitizen\FormCitizenStepSpendDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormCitizen\FormCitizenStepUpdatePwd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormCitizen\FormSelectAmout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormElectric\FormElectricStep01.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormElectric\FormElectricStep02.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormElectric\FormElectricStep03.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormElectric\FormElectricStep06.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormElectric\FormElectricStep06_success.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormExpress\FormExpressInput.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormExpress\FormExpressResult.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormGas\FormGas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormGas\FormGasGoldenCard\FormGasGoldenCardStep02.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormGas\FormGasGoldenCard\FormGasGoldenCardStep03.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormGas\FormGasGoldenCard\FormGasGoldenCardStep04.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormGas\FormGasGoldenCard\FormGasGoldenCardStep07.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormGas\FormGasGoldenCard\FormGasGoldenCardStep08_success.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormGas\FromGasPioneerCard\FormGasPioneerCardStep02.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormHeat\FormHeatStep01.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormHeat\FormHeatStep02.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormHeat\FormHeatStep06.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormHeat\FormHeatStep06_success.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormMaintainSign\FormMaintainSign.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormMaintainSign\FormMaintainSignWait.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormMaintainSign\FormMechineTemp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormMaintainSign\FormRefund.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormMaintainSign\FormMechineState.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormMaintainSign\FormNetTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormMobile\FormMobileStep.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormMobile\FormMobileStep01.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormMobile\FormMobileStep02.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormMobile\FormMobileStep03.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormMobile\FormMobileStep06.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormMobile\FormMobileStep06_success.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormMobile\FormMobileSelectAmout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormNews\FormNewsList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormNews\FormNewsDetails.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormPropSec\FormPropSec01.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormPropSec\FormPropSec01_2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormPropSec\FormPropSecStep09.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormPropSec\FormPropSecStep02.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormPropSec\FormPropSecStep03.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormPropSec\FormPropSecStep04.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormPropSec\FormPropSecStep07.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormPropSec\FormPropSecStep08_success.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormProp\FormPropStep.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormProp\FormPropStep01.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormProp\FormPropStep02.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormProp\FormPropStep02_house.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormProp\FormPropStep02_ParkingLot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormProp\FormPropStep06.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormProp\FormPropStep06_success.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormProp\PropTemp\FormPropStepTemp06.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormProp\PropTemp\FormPropStepTemp06_success.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormProp\PropTemp\FormPropStepTemp03.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormProp\PropTemp\FormPropStepTemp02.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormProp\PropTemp\FormPropStepInCard01.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormPublicFund\FormPublicFund.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormPublicFund\FormPublicFundAccountInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormPublicFund\FormPublicFundCardType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormPublicFund\FormPublicFundCustomerInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormPublicFund\FormPublicFundDetailedInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormPublicFund\FormPublicFundInput.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormPublicFund\FormPublicFundWait.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormPublicFund\FormPublicLoanBalanceInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormPublicFund\FormpublicLoanDetailedInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormRegistration\FormRegistrationSw.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormRegistration\FormRegistrationRecord.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormRegistration\FormRegistrationUndoInput.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormRegistration\FormRegistration_success.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormRegistration\FormRegistration.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormExpress\FormExpressType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormRegistration\FormRegistrationDoctor_3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormRegistration\FormRegistrationDepartment_2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormRegistration\FormRegistrationHospital_1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormRegistration\FormRegistrationInput.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormRegistration\FormRegistrationWait.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormSocialSecurity\FormSocialSecurityPensionGrant.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormSocialSecurity\FormSocialSecuritySelectTimet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormSocialSecurity\FormSocialSecurity.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormSocialSecurity\FormSocialSecurityInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormSocialSecurity\FormSocialSecurityInput.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormSocialSecurity\FormSocialSecurityMedicalAccount.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormSocialSecurity\FormSocialSecurityPensionAccount.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormSocialSecurity\FormSocialSecurityMedicalAccountConsume.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormSocialSecurity\FormSocialSecurityWait.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormTraffic\FormTrafficViolation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormUnicom\FormUnicomStep06_success.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormUnicom\FormUnicomStep02.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormUnicom\FormUnicomStep03.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormUnicom\FormUnicomStep06.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormWater\FormWaterStep01.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormWater\FormWaterStep02.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormWater\FormWaterStep03.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormWater\FormWaterStep06.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormWater\FormWaterStep06_success.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormGas\FormGasGoldenCard\FormGasGoldenCardFail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralForm\FormCashPay.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralForm\FormIsContinue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralForm\FormPrintError.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralForm\FormFail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralForm\FormFailNull.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralForm\FormCardFail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralForm\FormNot.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralForm\FormFailRefund.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralForm\FormReadCard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralForm\FormInputPassword.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralForm\FormStop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GeneralForm\FormPayType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GeneralForm\FormTemp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="keyboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="keyboard38.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="keyboard.xaml.cs">
+      <DependentUpon>keyboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="PictureChangeUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="style.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="usercontrol\BottomContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="usercontrol\CountDownTimer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ResourceManager.cs" />
+    <Compile Include="PicClass.cs" />
+    <Compile Include="PictureChangeUserControl.xaml.cs">
+      <DependentUpon>PictureChangeUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="FormLoad.resx">
+      <DependentUpon>FormLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winform\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cut-main\bg.jpg" />
+    <Resource Include="cut-main\notice.png" />
+    <Resource Include="cut-main\广告6.png" />
+    <Resource Include="cut-main\矩形 1.png" />
+    <Resource Include="cut-main\组 24.png" />
+    <Resource Include="cut-main\wantonka.png" />
+    <Resource Include="cut-main\jiaotonfakuan.png" />
+    <Resource Include="cut-main\zhengwuxinxi.png" />
+    <Resource Include="cut-main\组 28.png" />
+    <Resource Include="cut-main\组 29.png" />
+    <Resource Include="cut-main\组 30.png" />
+    <Resource Include="cut-main\组 31.png" />
+    <Resource Include="cut-main\组 32.png" />
+    <Resource Include="cut-main\组 33.png" />
+    <Resource Include="cut-main\组 34.png" />
+    <Resource Include="cut-main\组 36.png" />
+    <Resource Include="cut-main\组 37.png" />
+    <Resource Include="cut-main\组 40.png" />
+    <Resource Include="cut-main\组 41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cut-main\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="广告\广告2.png" />
+    <Resource Include="广告\广告3.png" />
+    <Resource Include="广告\广告6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cut-2\1.png" />
+    <Resource Include="cut-2\广告1.png" />
+    <Resource Include="cut-2\success.png" />
+    <Resource Include="cut-2\main-bg.png" />
+    <Resource Include="cut-2\step-now.png" />
+    <Resource Include="cut-2\btn-bg.png" />
+    <Resource Include="cut-2\step.png" />
+    <Resource Include="cut-2\pwd.png" />
+    <Resource Include="cut-2\card.png" />
+    <Resource Include="cut-2\组 401131211.png" />
+    <Resource Include="cut-2\step1.png" />
+    <Resource Include="cut-2\step4.png" />
+    <Resource Include="cut-2\step2.png" />
+    <Resource Include="cut-2\step3.png" />
+    <Resource Include="cut-2\dividerline.png" />
+    <Resource Include="cut-2\bg.png" />
+    <Resource Include="cut-2\btn-reset.png" />
+    <Resource Include="cut-2\ok.png" />
+    <Resource Include="cut-2\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cut-main\首页bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cut-main\24h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cut-main\weather.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\65db78e1f305c4cfc29fdcae21d31f07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\332211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button1.BackgroundImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button9.BackgroundImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dddd.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fc8bedcd2fe90702285430eac872ea62.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picGasCard.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picIconPhone.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weixuanzhong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wtcard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xuanzhong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\按钮.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\标题背景.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\表.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\单红色按钮.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\定时器黄色.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\二级广告页1圆.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\二级广告页1圆1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\二级广告页2圆.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\二级广告页2圆1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\分割线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\更正按钮.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黄色按钮.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黄色园按钮.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\金卡.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\进度条红.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\进度条蓝.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\喇叭.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\蓝色按钮.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\蓝色面板.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\深红色按钮.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\首页bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\圆角矩形 4222.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\先锋.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\组 122.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\组 24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\组 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\组 33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\组 34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\组 36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\组 40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\组 4011312.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\组 401131211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\组 4011312111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\组 41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cut-2\332211.png" />
+    <Resource Include="cut-2\65db78e1f305c4cfc29fdcae21d31f07.png" />
+    <Resource Include="cut-2\green-btn.png" />
+    <Resource Include="cut-2\button9.BackgroundImage.png" />
+    <Resource Include="cut-2\dddd.gif" />
+    <Resource Include="cut-2\error.png" />
+    <Resource Include="cut-2\fc8bedcd2fe90702285430eac872ea62.png" />
+    <Resource Include="cut-2\h24.png" />
+    <Resource Include="cut-2\line.png" />
+    <Resource Include="cut-2\load1.gif" />
+    <Resource Include="cut-2\logo.png" />
+    <Resource Include="cut-2\mobillecitizen.png" />
+    <Resource Include="cut-2\panel1.BackgroundImage.png" />
+    <Resource Include="cut-2\picGasCard.Image.png" />
+    <Resource Include="cut-2\phone.png" />
+    <Resource Include="cut-2\picLogo.Image.png" />
+    <Resource Include="cut-2\pictureBox1.Image.png" />
+    <Resource Include="cut-2\pictureBox2.Image.png" />
+    <Resource Include="cut-2\pictureBox3.Image.png" />
+    <Resource Include="cut-2\pictureBox4.Image.png" />
+    <Resource Include="cut-2\pictureBox5.Image.png" />
+    <Resource Include="cut-2\pictureBox6.Image.png" />
+    <Resource Include="cut-2\pictureBox7.Image.png" />
+    <Resource Include="cut-2\pictureBox8.Image.png" />
+    <Resource Include="cut-2\pictureBox9.Image.png" />
+    <Resource Include="cut-2\weixuanzhong.png" />
+    <Resource Include="cut-2\wtcard.png" />
+    <Resource Include="cut-2\xuanzhong.png" />
+    <Resource Include="cut-2\二级广告页1圆.png" />
+    <Resource Include="cut-2\二级广告页1圆1.png" />
+    <Resource Include="cut-2\二级广告页2圆.png" />
+    <Resource Include="cut-2\二级广告页2圆1.png" />
+    <Resource Include="cut-2\先锋.png" />
+    <Resource Include="cut-2\分割线.png" />
+    <Resource Include="cut-2\单红色按钮.png" />
+    <Resource Include="cut-2\喇叭.png" />
+    <Resource Include="cut-2\定时器黄色.png" />
+    <Resource Include="cut-2\按钮.png" />
+    <Resource Include="cut-2\更正按钮.png" />
+    <Resource Include="cut-2\标题背景.png" />
+    <Resource Include="cut-2\深红色按钮.png" />
+    <Resource Include="cut-2\组 122.png" />
+    <Resource Include="cut-2\组 24.png" />
+    <Resource Include="cut-2\组 321.png" />
+    <Resource Include="cut-2\组 33.png" />
+    <Resource Include="cut-2\组 34.png" />
+    <Resource Include="cut-2\组 36.png" />
+    <Resource Include="cut-2\组 40.png" />
+    <Resource Include="cut-2\组 4011312.png" />
+    <Resource Include="cut-2\组 4011312111.png" />
+    <Resource Include="cut-2\组 41.png" />
+    <Resource Include="cut-2\蓝色按钮.png" />
+    <Resource Include="cut-2\蓝色面板.png" />
+    <Resource Include="cut-2\表.png" />
+    <Resource Include="cut-2\进度条红.png" />
+    <Resource Include="cut-2\进度条蓝.png" />
+    <Resource Include="cut-2\金卡.png" />
+    <Resource Include="cut-2\首页bg.jpg" />
+    <Resource Include="cut-2\黄色园按钮.png" />
+    <Resource Include="cut-2\黄色按钮.png" />
+    <Resource Include="cut-main\mobillecitizen.png" />
+    <Resource Include="cut-main\qing.png" />
+    <Resource Include="cut-2\bus-card.png" />
+    <Resource Include="cut-main\gongjijin.png" />
+    <Resource Include="cut-main\reli.png" />
+    <Resource Include="cut-main\guangdian.png" />
+    <Resource Include="cut-2\textBlockBack.png" />
+    <Resource Include="cut-main\stop.png" />
+    <Resource Include="cut-2\d6_1.png" />
+    <Resource Include="cut-2\d6_2.png" />
+    <Resource Include="cut-2\d6_3.png" />
+    <Resource Include="cut-2\d6_4.png" />
+    <Resource Include="cut-2\d6_5.png" />
+    <Resource Include="cut-2\d6_6.png" />
+    <Resource Include="cut-2\blue_1.png" />
+    <Resource Include="cut-2\juxing.png" />
+    <Resource Include="cut-2\wt-card.png" />
+    <Resource Include="cut-2\11.png" />
+    <Resource Include="cut-2\广告6.png" />
+    <Resource Include="cut-main\甘肃一卡通.png" />
+    <Resource Include="cut-main\未标题-1.png" />
+    <Resource Include="cut-main\logoindex.png" />
+    <Resource Include="cut-2\yhcard.png" />
+    <Resource Include="cut-2\wtcard1.png" />
+    <Resource Include="cut-2\yhcard2.png" />
+    <Resource Include="cut-main\物业.png" />
+    <Resource Include="cut-main\联通.png" />
+    <Resource Include="cut-main\公积金贷款.png" />
+    <Resource Include="cut-main\公积金还款.png" />
+    <Resource Include="cut-main\养老.png" />
+    <Resource Include="cut-main\医保账户.png" />
+    <Resource Include="cut-main\医疗账户.png" />
+    <Resource Include="cut-2\物业卡.png" />
+    <None Include="cut-2\laodbg.jpg" />
+    <Resource Include="cut-main\swzj.png" />
+    <Resource Include="cut-2\prop2Water.gif" />
+    <Resource Include="cut-2\yhCard.gif" />
+    <Resource Include="cut-main\水.png" />
+    <Resource Include="cut-main\物业服务.png" />
+    <Content Include="GasDll\CRTDLL\CJ201api.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GasDll\GGDLL\CJ201api.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Interop.WMPLib.dll" />
+    <Content Include="Resources\24h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AnalysisBase\Analysis.csproj">
+      <Project>{58978efd-851b-4d61-b816-84572cf6aace}</Project>
+      <Name>Analysis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ICSharpCode.SharpZLib\ICSharpCode.SharpZLib.csproj">
+      <Project>{0e7413ff-eb9e-4714-acf2-be3a6a7b2ffd}</Project>
+      <Name>ICSharpCode.SharpZLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InspectUpdate\InspectUpdate.csproj">
+      <Project>{e73737c0-9cbc-4114-8814-49033f9f56c8}</Project>
+      <Name>InspectUpdate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Refund\RefundUtils.csproj">
+      <Project>{fff5b4e3-6e76-4624-8ab7-b0bdd8fcf4a1}</Project>
+      <Name>RefundUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SqlLiteHelper\SqlLiteHelper.csproj">
+      <Project>{5e729bd3-4c26-4bd0-8b03-dde15c3ef5fb}</Project>
+      <Name>SqlLiteHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\wtPayBLL\wtPayBLL.csproj">
+      <Project>{434abd0e-7b00-47f6-a897-11076dc7e287}</Project>
+      <Name>wtPayBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\wtPayCommon\wtPayCommon.csproj">
+      <Project>{6ab7d643-0dd8-46dc-9b86-a439340c1931}</Project>
+      <Name>wtPayCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\wtPayDAL\wtPayDAL.csproj">
+      <Project>{b9daf90e-3309-40d6-b717-59e7243d7af4}</Project>
+      <Name>wtPayDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\wtPayModel\wtPayModel.csproj">
+      <Project>{ef85d00c-dc6e-4f7b-9e18-5d08b33c0aab}</Project>
+      <Name>wtPayModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ELECTREADER01Lib">
+      <Guid>{48C2999B-2B8D-489E-8C7A-75662BB88C71}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MSHTML">
+      <Guid>{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MSScriptControl">
+      <Guid>{0E59F1D2-1FBE-11D0-8FF2-00A0D10038BC}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Scripting">
+      <Guid>{420B2830-E718-11CF-893D-00A0C9054228}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Scriptlet">
+      <Guid>{06290C00-48AA-11D2-8432-006008C3FBFC}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="wyzh">
+      <Guid>{1C700D45-5D4F-4891-9AEB-A69169753177}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

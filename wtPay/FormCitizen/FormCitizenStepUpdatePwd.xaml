@@ -1,0 +1,97 @@
+﻿<UserControl x:Class="wtPay.FormCitizen.FormCitizenStepUpdatePwd"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wtPay"
+      mc:Ignorable="d" Loaded="UserControl_Loaded_2"
+             xmlns:localusercontrol="clr-namespace:wtPay.usercontrol" 
+	>
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Margin="0,0,0,100">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"></RowDefinition>
+            <RowDefinition Height="100*"></RowDefinition>
+            <RowDefinition Height="300*"></RowDefinition>
+            <RowDefinition Height="130*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Width="859" Margin="30,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+           <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Stretch="Fill"  VerticalAlignment="Center" HorizontalAlignment="Center" Source="../cut-2/step1.png" Height="51" Margin="0,14" Width="659" />
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="1. 读取卡号" Foreground="White" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" Height="28" Margin="-50,20,86,21" Width="114" Grid.ColumnSpan="2"></TextBlock>
+            <TextBlock Grid.Row="0" Text="2. 密码修改" Foreground="White" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" Height="28" Margin="-80,20,39,21" Width="114" Grid.ColumnSpan="2" Grid.Column="1"/>
+            <TextBlock Grid.Row="0" Grid.Column="2" Text="3. 输入密码" Foreground="White" FontSize="22" VerticalAlignment="Center" Height="28" Margin="55,20,3,21" Width="120"/>
+            <TextBlock Grid.Row="0" Grid.Column="3" Text="4. 完成" Foreground="White" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,20,29,21" Height="28" Width="68" />
+            <Grid Grid.Column="4">
+                <localusercontrol:CountDownTimer></localusercontrol:CountDownTimer>
+            </Grid>
+        </Grid>
+    
+        <Grid Grid.Row="2" Margin="90,-50,20,50">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="46*"></RowDefinition>
+                <RowDefinition Height="45*"></RowDefinition>
+                <RowDefinition Height="46*"></RowDefinition>
+                <RowDefinition Height="45*"></RowDefinition>
+                <RowDefinition Height="45*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="430"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                
+            </Grid.ColumnDefinitions>
+            <local:keyboard x:Name="keyboard"  Grid.Row="0" Grid.RowSpan="5" Grid.Column="1" VerticalAlignment="Top" Height="350" Width="320" Margin="0,0,0,0"></local:keyboard>
+            <Label VerticalAlignment="Center" HorizontalAlignment="Left" Content="旧密码:" Grid.Row="1" Grid.Column="0" Foreground="White" FontSize="18pt" Margin="25,0,0,0"/>
+            <Image  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Stretch="Fill"  VerticalAlignment="Center" HorizontalAlignment="Center" Width="205" Height="45" Source="../cut-2/textBlockBack.png"  Margin="-300,0,0,0" />
+            <TextBox Name="oldPwd" Background="{x:Null}" BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="0" Width="200" Height="40" FontSize="24" Margin="140,0,0,0" GotFocus="oldPwd_GotFocus" TextChanged="oldPwd_TextChanged"></TextBox>
+            <Image Name="img1" Source="/cut-2/xuanzhong.png" Margin="-20,15,0,0" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Width="45" Height="40" VerticalAlignment="Top"/>
+
+            <Label VerticalAlignment="Center" HorizontalAlignment="Left" Content="新密码:" Grid.Row="2" Grid.Column="0" Foreground="White" FontSize="18pt" Margin="25,0,0,0"/>
+            <Image Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Stretch="Fill"  VerticalAlignment="Center" HorizontalAlignment="Center" Width="205" Height="45" Source="../cut-2/textBlockBack.png"  Margin="-300,0,0,0" />
+            <TextBox Name="newPwd" Background="{x:Null}" BorderThickness="0"  VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Row="2" Grid.Column="0" Width="200" Height="40" FontSize="24" Margin="140,4,0,2" GotFocus="newPwd_GotFocus" TextChanged="newPwd_TextChanged"></TextBox>
+            <Image Name="img2" Source="/cut-2/weixuanzhong.png" Margin="330,15,0,0" Grid.Row="2" Grid.Column="0" Width="45" Height="40" VerticalAlignment="Top"/>
+
+            <Label VerticalAlignment="Center" HorizontalAlignment="Left" Content="确认密码:" Grid.Row="3" Grid.Column="0" Foreground="White" FontSize="18pt" Margin="0,0,0,0"/>
+            <Image Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Stretch="Fill"  VerticalAlignment="Center" HorizontalAlignment="Center" Width="205" Height="45" Source="../cut-2/textBlockBack.png"  Margin="-300,0,0,0" />
+            <TextBox Name="newPwd2" Background="{x:Null}" BorderThickness="0"  VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="0" Width="200" Height="40" FontSize="24" Margin="140,4,0,2" GotFocus="newPwd2_GotFocus"></TextBox>
+            <Image Name="img3" Source="/cut-2/weixuanzhong.png" Margin="330,15,0,0" Grid.Row="3" Grid.Column="0" Width="45" Height="40" VerticalAlignment="Top"/>
+
+            <Label VerticalAlignment="Center" HorizontalAlignment="Left" Content="密码类型:" Grid.Row="4" Grid.Column="0" Foreground="White" FontSize="18pt" Margin="0,0,0,0"/>
+            <Image Name="typeimg1" Source="/cut-2/weixuanzhong.png" Margin="-400,0,71,0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Width="45" Height="40" MouseLeftButtonDown="Label_MouseLeftButtonDown"/>
+            <Label VerticalAlignment="Center" HorizontalAlignment="Left" Content="查询密码" Grid.Row="4" Grid.Column="0" Foreground="White" FontSize="18pt" Margin="170,0,0,0" MouseLeftButtonDown="Label_MouseLeftButtonDown"/>
+            <Image Name="typeimg2" Source="/cut-2/weixuanzhong.png" Margin="-100,0,71,0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Width="45" Height="40" MouseLeftButtonDown="Label_MouseLeftButtonDown_1"/>
+            <Label VerticalAlignment="Center" HorizontalAlignment="Left" Content="消费密码" Grid.Row="4" Grid.Column="0" Foreground="White" FontSize="18pt" Margin="320,0,0,0" MouseLeftButtonDown="Label_MouseLeftButtonDown_1"/>
+            <Label Name="lblShowinfo" VerticalAlignment="Center" HorizontalAlignment="Left" Content="提示：  请输入密码" Grid.Row="0" Grid.Column="0" Foreground="White" FontSize="18pt" Margin="40,0,0,0"/>
+
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="0"  Margin="0,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Uid="确定" Grid.Row="0" Grid.Column="0" DataContext="../cut-2/蓝色按钮.png" Style="{StaticResource  choose-btn-style}" Click="Button_Click">
+
+            </Button>
+            <TextBox Name="oldPassword" Grid.Column="1" Height="30" Width="50" TextChanged="oldPassword_TextChanged"></TextBox>
+            <TextBox Name="newPassword" Grid.Column="1" Height="30" Width="50" TextChanged="newPassword_TextChanged"></TextBox>
+            <TextBox Name="newPassword2" Grid.Column="1" Height="30" Width="50" TextChanged="newPassword2_TextChanged"></TextBox>
+            <Button Uid="返回" Grid.Row="0" Grid.Column="2" DataContext="../cut-2/exit.png" Style="{StaticResource choose-btn-style }" Click="退出_Click" >
+
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>

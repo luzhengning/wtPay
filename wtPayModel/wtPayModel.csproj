@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF85D00C-DC6E-4F7B-9E18-5D08B33C0AAB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>wtPayModel</RootNamespace>
+    <AssemblyName>wtPayModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\wtPayBLL\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BroadCas\BroadCasLoginInfo.cs" />
+    <Compile Include="BroadCas\BroadCasLoginParam.cs" />
+    <Compile Include="BroadCas\BroadCasOrderInfo.cs" />
+    <Compile Include="BroadCas\BroadCasOrderParam.cs" />
+    <Compile Include="PaymentModel\BroadCasPayParam.cs" />
+    <Compile Include="BroadCas\BroadCasPayresInfo.cs" />
+    <Compile Include="BroadCas\BroadCasPayresParam.cs" />
+    <Compile Include="BroadCas\BroadCasQueryInfo.cs" />
+    <Compile Include="BroadCas\BroadCasQueryParam.cs" />
+    <Compile Include="BusModel\BusCpuCardInfo.cs" />
+    <Compile Include="BusModel\BusCpuCardParam.cs" />
+    <Compile Include="BusModel\BusLoginInfo.cs" />
+    <Compile Include="BusModel\BusLoginParam.cs" />
+    <Compile Include="PaymentModel\BusPayParam.cs" />
+    <Compile Include="BusModel\BusPayresInfo.cs" />
+    <Compile Include="BusModel\BusPayresParam.cs" />
+    <Compile Include="BusModel\BusQueryInfo.cs" />
+    <Compile Include="BusModel\BusQueryParam.cs" />
+    <Compile Include="BusModel\BusQueryThatInfo.cs" />
+    <Compile Include="BusModel\BusReChangeParam.cs" />
+    <Compile Include="BusModel\BusRegisterInfo.cs" />
+    <Compile Include="BusModel\BusRegisterParam.cs" />
+    <Compile Include="Card.cs" />
+    <Compile Include="ConfigModel\ConfigPropParam.cs" />
+    <Compile Include="ConfigModel\ConfigSysParam.cs" />
+    <Compile Include="ConfigModel\DictParam.cs" />
+    <Compile Include="ElecModel\ElecLoginInfo.cs" />
+    <Compile Include="ElecModel\ElecLoginParam.cs" />
+    <Compile Include="ElecModel\ElecOrderInfo.cs" />
+    <Compile Include="ElecModel\ElecOrderParam.cs" />
+    <Compile Include="PaymentModel\ElecPayParam.cs" />
+    <Compile Include="ElecModel\ElecPerPayresInfo.cs" />
+    <Compile Include="ElecModel\ElecPerPayresParam.cs" />
+    <Compile Include="ElecModel\ElecQueryElecInfo.cs" />
+    <Compile Include="ElecModel\ElecQueryElecParam.cs" />
+    <Compile Include="ElecModel\ElecQueryUserInfo.cs" />
+    <Compile Include="ElecModel\ElecQueryUserParam.cs" />
+    <Compile Include="ElecModel\ElecPayresInfo.cs" />
+    <Compile Include="ElecModel\ElecPayresParam.cs" />
+    <Compile Include="EnableButton.cs" />
+    <Compile Include="ExpressModel\ExpressClass.cs" />
+    <Compile Include="ExpressModel\HuiShengExpressInfo.cs" />
+    <Compile Include="ExpressModel\ShenTonExpressInfo.cs" />
+    <Compile Include="ExpressModel\YouZhengExpressInfo.cs" />
+    <Compile Include="ExpressModel\YuanTonExpressInfo.cs" />
+    <Compile Include="ExpressModel\ZhaijisongExpressInfo.cs" />
+    <Compile Include="ExpressModel\ZhongTieExpressInfo.cs" />
+    <Compile Include="GasCard.cs" />
+    <Compile Include="GasModel\GasLoginInfo.cs" />
+    <Compile Include="GasModel\GasLoginParam.cs" />
+    <Compile Include="GasModel\GasOrderInfo.cs" />
+    <Compile Include="GasModel\GasOrderParam.cs" />
+    <Compile Include="PaymentModel\GasPayParam.cs" />
+    <Compile Include="GasModel\GasPayresInfo.cs" />
+    <Compile Include="GasModel\GasPayresParam.cs" />
+    <Compile Include="GasModel\GasQueryInfo.cs" />
+    <Compile Include="GasModel\GasQueryParam.cs" />
+    <Compile Include="HeatModel\HeatLoginInfo.cs" />
+    <Compile Include="HeatModel\HeatLoginParam.cs" />
+    <Compile Include="HeatModel\HeatOrderInfo.cs" />
+    <Compile Include="HeatModel\HeatOrderParam.cs" />
+    <Compile Include="PaymentModel\HeatPayParam.cs" />
+    <Compile Include="HeatModel\HeatPayresInfo.cs" />
+    <Compile Include="HeatModel\HeatPayresParam.cs" />
+    <Compile Include="HeatModel\HeatQueryInfo.cs" />
+    <Compile Include="HeatModel\HeatQueryParam.cs" />
+    <Compile Include="MaintainSignInfo.cs" />
+    <Compile Include="Mobile\MobileOrderInfo.cs" />
+    <Compile Include="PaymentModel\MobilePayParam.cs" />
+    <Compile Include="Mobile\MobilePayresInfo.cs" />
+    <Compile Include="Mobile\MobileQueryInfo.cs" />
+    <Compile Include="Mobile\MobileLoginParam.cs" />
+    <Compile Include="Mobile\MobileOrderParam.cs" />
+    <Compile Include="Mobile\MobilePayresParam.cs" />
+    <Compile Include="Mobile\MobileQueryParam.cs" />
+    <Compile Include="Msghead.cs" />
+    <Compile Include="NewsModel\News.cs" />
+    <Compile Include="PaymentModel\Payment.cs" />
+    <Compile Include="PaymentModel\PaymentBase.cs" />
+    <Compile Include="PayParamModel\CorrectParam.cs" />
+    <Compile Include="PayParamModel\PayParam.cs" />
+    <Compile Include="PayParamModel\PayResultInfo.cs" />
+    <Compile Include="PayParamModel\RefundParam.cs" />
+    <Compile Include="PayParamModel\SignResultInfo.cs" />
+    <Compile Include="PayParamModel\WriteCardParam.cs" />
+    <Compile Include="PaySign.cs" />
+    <Compile Include="PayStaticParam.cs" />
+    <Compile Include="PromptModel\PayPromptInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropModel\PropParam.cs" />
+    <Compile Include="PaymentModel\PropPayParam.cs" />
+    <Compile Include="PaymentModel\PropPayTempParam.cs" />
+    <Compile Include="PropSecModel\PropMeterInfo.cs" />
+    <Compile Include="PropSecModel\PropSec.cs" />
+    <Compile Include="PropSecModel\PropSecCardJson.cs" />
+    <Compile Include="PropSecModel\PropSecLoginInfo.cs" />
+    <Compile Include="PropSecModel\PropSecOrderInfo.cs" />
+    <Compile Include="PaymentModel\PropSecPayParam.cs" />
+    <Compile Include="PropSecModel\PropSecPayResInfo.cs" />
+    <Compile Include="PropSecModel\PropSecQueryInfo.cs" />
+    <Compile Include="PublicFundModel\PublicFund.cs" />
+    <Compile Include="refundParam.cs" />
+    <Compile Include="MediaResourceModel\ResourceClass.cs" />
+    <Compile Include="RegistrationModel\DepartmentClass.cs" />
+    <Compile Include="RegistrationModel\DoctorClass.cs" />
+    <Compile Include="RegistrationModel\HospitalClass.cs" />
+    <Compile Include="RegistrationModel\PropLogin.cs" />
+    <Compile Include="RegistrationModel\RegistrationClass.cs" />
+    <Compile Include="RegistrationModel\RegistrationRecordClass.cs" />
+    <Compile Include="SocialSecurityModel\SocialSecurity.cs" />
+    <Compile Include="SysStateParam.cs" />
+    <Compile Include="SystemModel\FormTip.cs" />
+    <Compile Include="SystemModel\SystemOrder.cs" />
+    <Compile Include="test.cs" />
+    <Compile Include="TradeRecord.cs" />
+    <Compile Include="UnicomModel\UnicomOrderInfo.cs" />
+    <Compile Include="UnicomModel\UnicomOrderParam.cs" />
+    <Compile Include="PaymentModel\UnicomPayParam.cs" />
+    <Compile Include="UnicomModel\UnicomPayResInfo.cs" />
+    <Compile Include="UnicomModel\UnicomPayResParam.cs" />
+    <Compile Include="UnicomModel\UnicomQueryInfo.cs" />
+    <Compile Include="UnicomModel\UnicomQueryParam.cs" />
+    <Compile Include="WaterModel\WaterLoginInfo.cs" />
+    <Compile Include="WaterModel\WaterLoginParam.cs" />
+    <Compile Include="WaterModel\WaterOrderInfo.cs" />
+    <Compile Include="WaterModel\WaterOrderParam.cs" />
+    <Compile Include="PaymentModel\WaterPayParam.cs" />
+    <Compile Include="WaterModel\WaterPayresInfo.cs" />
+    <Compile Include="WaterModel\WaterPayresParam.cs" />
+    <Compile Include="WaterModel\WaterQueryInfo.cs" />
+    <Compile Include="WaterModel\WaterQueryParam.cs" />
+    <Compile Include="WeatherModel\Pm.cs" />
+    <Compile Include="WeatherModel\Weather.cs" />
+    <Compile Include="WintopModel\WintopDiscount.cs" />
+    <Compile Include="WintopModel\WintopLossReportInfo.cs" />
+    <Compile Include="WintopModel\WintopLossReportParam.cs" />
+    <Compile Include="WintopModel\WintopMessage.cs" />
+    <Compile Include="WintopModel\WintopPayresInfo.cs" />
+    <Compile Include="WintopModel\WintopPayresParam.cs" />
+    <Compile Include="WintopModel\WintopRechargeDetailInfo.cs" />
+    <Compile Include="WintopModel\WintopRechargeDetailParam.cs" />
+    <Compile Include="PaymentModel\WintopReChargeParam.cs" />
+    <Compile Include="WintopModel\WintopLoginInfo.cs" />
+    <Compile Include="WintopModel\WintopLoginParam.cs" />
+    <Compile Include="WintopModel\WintopOrderInfo.cs" />
+    <Compile Include="WintopModel\WintopOrderParam.cs" />
+    <Compile Include="WintopModel\WintopPayParam.cs" />
+    <Compile Include="WintopModel\WintopQueryInfo.cs" />
+    <Compile Include="WintopModel\WintopQueryparam.cs" />
+    <Compile Include="WintopModel\WintopSendValidateCodeInfo.cs" />
+    <Compile Include="WintopModel\WintopSendValidateCodeParam.cs" />
+    <Compile Include="WintopModel\WintopSpendDetailInfo.cs" />
+    <Compile Include="WintopModel\WintopSpendDetailParam.cs" />
+    <Compile Include="WintopModel\WintopStatus.cs" />
+    <Compile Include="WintopModel\WintopUpdateWtPwdInfo.cs" />
+    <Compile Include="WintopModel\WintopUpdateWtPwdParam.cs" />
+    <Compile Include="WtShopNoInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\wtPayModel.csprojResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\System.Net.Http.dll" />
+    <Content Include="bin\Debug\System.Net.Http.xml" />
+    <Content Include="bin\Debug\wtPayModel.dll" />
+    <Content Include="bin\Debug\wtPayModel.pdb" />
+    <Content Include="obj\Debug\wtPayModel.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\wtPayModel.dll" />
+    <Content Include="obj\Debug\wtPayModel.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

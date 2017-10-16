@@ -1,0 +1,94 @@
+﻿<UserControl x:Class="wtPay.GeneralForm.FormPayType"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:localusercontrol="clr-namespace:wtPay.usercontrol" Unloaded="UserControl_Unloaded" Loaded="UserControl_Loaded" 
+	>
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Margin="0,0,0,100">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"></RowDefinition>
+            <RowDefinition Height="100*"></RowDefinition>
+            <RowDefinition Height="300*"></RowDefinition>
+            <RowDefinition Height="130*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Width="859" Margin="30,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Stretch="Fill"  VerticalAlignment="Center" HorizontalAlignment="Center" Source="../cut-2/step3.png" Height="51" Margin="0,14" Width="659" />
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="1. 首页" Foreground="White" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" Height="28" Margin="-50,20,86,21" Width="114" Grid.ColumnSpan="2"></TextBlock>
+            <TextBlock Grid.Row="0" Text="2. 业务" Foreground="White" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" Height="28" Margin="-80,20,39,21" Width="114" Grid.ColumnSpan="2" Grid.Column="1"/>
+            <TextBlock Grid.Row="0" Grid.Column="2" Text="3. 支付" Foreground="White" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" Height="28"  Margin="70,20,3,21" Width="98"/>
+            <TextBlock Grid.Row="0" Grid.Column="3" Text="4. 完成" Foreground="White" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,20,29,21" Height="28" Width="68" />
+            <Grid Grid.Column="4">
+                <localusercontrol:CountDownTimer></localusercontrol:CountDownTimer>
+            </Grid>
+        </Grid>
+        
+        <Grid Grid.Row="1" Grid.RowSpan="2" Margin="35,0,-90,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="500px"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Name="lblAccountInfoTip" Content="请选择支付方式" HorizontalAlignment="Center"   FontSize="20pt" Foreground="White" Margin="-100,30,0,0"></Label>
+            <Grid Grid.Row="0">
+                <Button Name="netTextBtn" Panel.ZIndex="100" Width="230" Height="70"   Click="Button_Click" Margin="300,-150,0,0">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Grid>
+                                <Rectangle>
+                                    <Rectangle.Fill>
+                                        <ImageBrush ImageSource="../cut-2/组 401131211.png"/>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="25" Foreground="#FFF9F3F3" Name="netTextBlock" Margin="0,18,65,18"><Run Name="netTextInfo" Language="zh-cn" Text="纸质现金"/></TextBlock>
+                            </Grid>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+            <Grid Grid.Row="0">
+                <Button  Width="230" Height="70"  Margin="-500,-150,0,0" Click="Button_Click_1">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Grid>
+                                <Rectangle>
+                                    <Rectangle.Fill>
+                                        <ImageBrush ImageSource="../cut-2/组 401131211.png"/>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Foreground="#FFF9F3F3"  ><Run Language="zh-cn" Text="电子现金"/></TextBlock>
+                            </Grid>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button Uid="退出" Grid.Row="0" Grid.Column="2" DataContext="cut-2/exit.png" Style="{StaticResource choose-btn-style }" Click="退出_Click">
+
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>
+
