@@ -16,7 +16,7 @@ namespace wtPayDAL
         /// <returns></returns>
         public static string HeatLogin()
         {
-            HeatInterface access = new HeatInterface();
+            HeatInterface access = new HeatInterface();//asdfa
             HeatLoginParam param = new HeatLoginParam();
             param.trandateTime = SysBLL.getYYYYMMDDHHMMSSTime();
             param.servicename = "DL001";
